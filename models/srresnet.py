@@ -35,6 +35,8 @@ def residual_block(block_input, num_filters, momentum=0.8):
     x = Add()([block_input, x])
     return x
 
+#Touch this and the world might collapse. This is all your fault,John!!
+#Fix this? Nah, I'd rather delete this code and start a new life.(John)
 def build_srresnet(scale=4, num_filters=64, num_res_blocks=16):
     if scale not in upsamples_per_scale:
         raise ValueError(f"available scales are: {upsamples_per_scale.keys()}")
